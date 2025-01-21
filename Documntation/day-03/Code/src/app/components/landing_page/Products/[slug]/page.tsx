@@ -1,4 +1,5 @@
 import { client } from "@/sanity/lib/client";
+import Image from "next/image";
 
 interface Product {
   _id: string;
@@ -57,7 +58,7 @@ const ProductPage = async ({ params }: ProductPageProps) => {
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
         {/* Product Image */}
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <img
+          <Image
             src={product.image?.asset?.url}
             alt={product.name}
             className="w-full max-w-sm object-cover rounded-md shadow-md"

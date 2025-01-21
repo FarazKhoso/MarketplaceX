@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io";
 import { client } from "@/sanity/lib/client";
+import Link from "next/link";
 
 interface Category {
   name: string;
@@ -52,12 +53,12 @@ const Footer: React.FC = () => {
             {categories.length > 0 ? (
               categories.map((category) => (
                 <li key={category.slug}>
-                  <a
+                  <Link
                     href={`/category/${category.slug}`}
                     className="text-sm hover:underline hover:text-gray-300"
                   >
                     {category.name}
-                  </a>
+                  </Link>
                 </li>
               ))
             ) : (
@@ -69,32 +70,32 @@ const Footer: React.FC = () => {
           <ul className="flex flex-col gap-2">
             <li className="text-lg font-semibold">Menu</li>
             <li>
-              <a href="#" className="text-sm hover:underline hover:text-gray-300">
+              <Link href="#" className="text-sm hover:underline hover:text-gray-300">
                 New arrivals
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-sm hover:underline hover:text-gray-300">
+              <Link href="#" className="text-sm hover:underline hover:text-gray-300">
                 Best sellers
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-sm hover:underline hover:text-gray-300">
+              <Link href="#" className="text-sm hover:underline hover:text-gray-300">
                 Recently viewed
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-sm hover:underline hover:text-gray-300">
+              <Link href="#" className="text-sm hover:underline hover:text-gray-300">
                 Popular this week
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/components/Product-Listing"
                 className="text-sm hover:underline hover:text-gray-300"
               >
                 All products
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -102,32 +103,32 @@ const Footer: React.FC = () => {
           <ul className="flex flex-col gap-2">
             <li className="text-lg font-semibold">Our company</li>
             <li>
-              <a
+              <Link
                 href="/components/about"
                 className="text-sm hover:underline hover:text-gray-300"
               >
                 About us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-sm hover:underline hover:text-gray-300">
+              <Link href="#" className="text-sm hover:underline hover:text-gray-300">
                 Vacancies
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-sm hover:underline hover:text-gray-300">
+              <Link href="#" className="text-sm hover:underline hover:text-gray-300">
                 Contact us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-sm hover:underline hover:text-gray-300">
+              <Link href="#" className="text-sm hover:underline hover:text-gray-300">
                 Privacy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-sm hover:underline hover:text-gray-300">
+              <Link href="#" className="text-sm hover:underline hover:text-gray-300">
                 Returns policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -160,24 +161,24 @@ const Footer: React.FC = () => {
       <div className="container mx-auto py-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
         <p className="text-sm">© 2022 Avion LTD. All rights reserved.</p>
         <div className="flex gap-4 text-lg">
-          <a href="https://www.linkedin.com/in/muhammad-faraz-931200347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " className="hover:text-gray-300">
+          <Link href="https://www.linkedin.com/in/muhammad-faraz-931200347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " className="hover:text-gray-300">
             <FaLinkedin />
-          </a>
-          <a href="https://www.facebook.com/share/154nD3RiJb/?mibextid=qi2Omg" className="hover:text-gray-300">
+          </Link>
+          <Link href="https://www.facebook.com/share/154nD3RiJb/?mibextid=qi2Omg" className="hover:text-gray-300">
             <IoLogoFacebook />
-          </a>
-          <a href="https://www.instagram.com/p/C6mFDs5iQ3P/?igsh=Mng2emNpdjh0N3Bi" className="hover:text-gray-300">
+          </Link>
+          <Link href="https://www.instagram.com/p/C6mFDs5iQ3P/?igsh=Mng2emNpdjh0N3Bi" className="hover:text-gray-300">
             <FaInstagram />
-          </a>
-          <a href="https://www.skype.com" className="hover:text-gray-300">
+          </Link>
+          <Link href="https://www.skype.com" className="hover:text-gray-300">
             <FaSkype />
-          </a>
-          <a href="https://www.twitter.com" className="hover:text-gray-300">
+          </Link>
+          <Link href="https://www.twitter.com" className="hover:text-gray-300">
             <FaTwitter />
-          </a>
-          <a href="https://www.pinterest.com" className="hover:text-gray-300">
+          </Link>
+          <Link href="https://www.pinterest.com" className="hover:text-gray-300">
             <FaPinterest />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

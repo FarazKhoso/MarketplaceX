@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 
@@ -44,7 +44,7 @@ const ProductsPage = async () => {
               index % 2 === 0 ? "animate-fade-in-left" : "animate-fade-in-right"
             }`}
           >
-            <img
+            <Image
               src={product.image?.asset?.url}
               alt={product.name}
               className="w-full h-[200px] object-cover"

@@ -30,14 +30,18 @@ const CategoryProducts: React.FC<CategoryProductsProps> = ({ products, slug }) =
   if (!products || products.length === 0) {
     return (
       <div className="text-center py-20">
-        <h1 className="text-2xl">No products found for the category "{slug.current}".</h1>
+        <h1 className="text-2xl">
+          No products found for the category &quot;{slug.current}&quot;.
+        </h1>
       </div>
     );
   }
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-center mb-8 capitalize">{slug.current} Products</h1>
+      <h1 className="text-3xl font-bold text-center mb-8 capitalize">
+        {slug.current} Products
+      </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
           <div key={product._id} className="bg-white shadow-lg rounded-lg p-4">

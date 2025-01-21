@@ -1,13 +1,24 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FaPinterest, FaTwitter, FaInstagram, FaLinkedin, FaSkype } from "react-icons/fa";
+import {
+  FaPinterest,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaSkype,
+} from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io";
 import { client } from "@/sanity/lib/client";
 
-const Footer = () => {
-  const [categories, setCategories] = useState([]);
-  const [email, setEmail] = useState("");
+interface Category {
+  name: string;
+  slug: string;
+}
+
+const Footer: React.FC = () => {
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [email, setEmail] = useState<string>("");
 
   // Fetch categories dynamically from Sanity
   useEffect(() => {
@@ -39,7 +50,7 @@ const Footer = () => {
           <ul className="flex flex-col gap-2">
             <li className="text-lg font-semibold">Categories</li>
             {categories.length > 0 ? (
-              categories.map((category:any) => (
+              categories.map((category) => (
                 <li key={category.slug}>
                   <a
                     href={`/category/${category.slug}`}
@@ -78,7 +89,10 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="components/Product-Listing/" className="text-sm hover:underline hover:text-gray-300">
+              <a
+                href="/components/Product-Listing"
+                className="text-sm hover:underline hover:text-gray-300"
+              >
                 All products
               </a>
             </li>
@@ -88,7 +102,10 @@ const Footer = () => {
           <ul className="flex flex-col gap-2">
             <li className="text-lg font-semibold">Our company</li>
             <li>
-              <a href="/components/about" className="text-sm hover:underline hover:text-gray-300">
+              <a
+                href="/components/about"
+                className="text-sm hover:underline hover:text-gray-300"
+              >
                 About us
               </a>
             </li>
@@ -143,52 +160,22 @@ const Footer = () => {
       <div className="container mx-auto py-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
         <p className="text-sm">© 2022 Avion LTD. All rights reserved.</p>
         <div className="flex gap-4 text-lg">
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300"
-          >
+          <a href="https://www.linkedin.com/in/muhammad-faraz-931200347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " className="hover:text-gray-300">
             <FaLinkedin />
           </a>
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300"
-          >
+          <a href="https://www.facebook.com/share/154nD3RiJb/?mibextid=qi2Omg" className="hover:text-gray-300">
             <IoLogoFacebook />
           </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300"
-          >
+          <a href="https://www.instagram.com/p/C6mFDs5iQ3P/?igsh=Mng2emNpdjh0N3Bi" className="hover:text-gray-300">
             <FaInstagram />
           </a>
-          <a
-            href="https://www.skype.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300"
-          >
+          <a href="https://www.skype.com" className="hover:text-gray-300">
             <FaSkype />
           </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300"
-          >
+          <a href="https://www.twitter.com" className="hover:text-gray-300">
             <FaTwitter />
           </a>
-          <a
-            href="https://www.pinterest.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-300"
-          >
+          <a href="https://www.pinterest.com" className="hover:text-gray-300">
             <FaPinterest />
           </a>
         </div>

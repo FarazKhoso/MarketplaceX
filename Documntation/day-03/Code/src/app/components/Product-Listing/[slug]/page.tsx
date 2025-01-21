@@ -1,5 +1,5 @@
-
 import { client } from "@/sanity/lib/client";
+import Image from "next/image";
 
 interface Product {
   _id: string;
@@ -56,11 +56,17 @@ const ProductPage = async ({ params }: ProductPageProps) => {
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
         {/* Product Image */}
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <img
-            src={product.image?.asset?.url}
-            alt={product.name}
-            className="w-full max-w-sm object-cover rounded-md shadow-md"
-          />
+          <div className="w-full md:w-1/2">
+            {product.image?.asset?.url && (
+              <Image
+                src={product.image.asset.url}
+                alt={product.name}
+                width={400}
+                height={400}
+                className="rounded-md shadow-md"
+              />
+            )}
+          </div>
           {/* Product Details */}
           <div className="flex-1">
             <h1 className="text-3xl font-bold text-gray-800">{product.name}</h1>
@@ -89,10 +95,10 @@ const ProductPage = async ({ params }: ProductPageProps) => {
         </div>
         {/* Action Buttons */}
         <div className="mt-8 flex gap-4 justify-center">
-          <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+          <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
             Add to Cart
           </button>
-          <button className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+          <button className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition duration-300">
             Buy Now
           </button>
         </div>
@@ -102,8 +108,6 @@ const ProductPage = async ({ params }: ProductPageProps) => {
 };
 
 export default ProductPage;
-
-
 
 
 

@@ -4,7 +4,7 @@ import OurProduct from './ourProduct'
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import {client} from "@/sanity/lib/client"; // Replace with your Sanity client instance
+import {client} from "@/sanity/lib/client"; 
 
 interface Product {
   _id: string;
@@ -81,10 +81,9 @@ const Ceramics: React.FC = () => {
           </div>
         </div>
       </div>
+<OurProduct/> 
     </div>
   );
 };
 
 export default Ceramics;
-
-{/* <OurProduct/> */}

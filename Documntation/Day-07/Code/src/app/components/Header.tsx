@@ -59,7 +59,7 @@ const Header = () => {
         <h1 className="text-2xl font-bold">Avion</h1>
 
         {/* Search Bar */}
-        <div className="flex items-center w-full max-w-[500px] mx-auto relative">
+        <div className="flex items-center w-full max-w-[500px] mx-2 relative">
           <input
             type="text"
             value={searchTerm}
@@ -75,19 +75,19 @@ const Header = () => {
           />
         </div>
 
-       <div className="flex items-center gap-6 relative">
+       <div className="flex items-center md:gap-6 gap-2 relative">
   <Link href="/Shopping-Cart/" className="relative">
-    <BiCart className="text-3xl cursor-pointer" />
+    <BiCart className="md:text-2xl text-xl cursor-pointer" />
     {totalItems > 0 && (
       <span
         className="absolute top-0 right-0 bg-red-500 
-        text-white text-xs w-5 h-5 rounded-full flex items-center justify-center transform translate-x-2 -translate-y-1"
+        text-white text-xs w-4 h-4 rounded-full flex items-center justify-center transform translate-x-2 -translate-y-1"
       >
         {totalItems}
       </span>
     )}
   </Link>
-  <IoIosContact className="text-3xl cursor-pointer" />
+  <IoIosContact className="md:text-2xl text-xl cursor-pointer" />
 </div>
 </div>
 
@@ -111,3 +111,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+

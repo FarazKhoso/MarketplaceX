@@ -1,0 +1,12 @@
+src/
+  components/
+    ProductCard.jsx
+    ProductList.jsx
+    SearchBar.jsx
+    CategoryFilter.jsx
+  pages/
+    index.jsx
+    product/
+      [id].jsx
+  styles/
+README.md

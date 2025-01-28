@@ -28,7 +28,7 @@ This project is a **dynamic marketplace frontend** built using **Next.js** and *
    - Create a `.env.local` file and add:
      ```env
     NEXT_PUBLIC_SANITY_PROJECT_ID="r767gjth"
-   NEXT_PUBLIC_SANITY_DATASET="production"
+    NEXT_PUBLIC_SANITY_DATASET="production"
      ```
 4. **Run the development server:**
    ```bash

@@ -17,8 +17,8 @@ This project is a **dynamic marketplace frontend** built using **Next.js** and *
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-repository-link.git
-   cd your-repository-name
+   git clone https://github.com/FarazKhoso/MarketplaceX.git
+   cd MarketplaceX
    ```
 2. **Install dependencies:**
    ```bash
@@ -27,8 +27,8 @@ This project is a **dynamic marketplace frontend** built using **Next.js** and *
 3. **Set up environment variables:**
    - Create a `.env.local` file and add:
      ```env
-     NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
-     NEXT_PUBLIC_SANITY_DATASET=production
+    NEXT_PUBLIC_SANITY_PROJECT_ID="r767gjth"
+    NEXT_PUBLIC_SANITY_DATASET="production"
      ```
 4. **Run the development server:**
    ```bash

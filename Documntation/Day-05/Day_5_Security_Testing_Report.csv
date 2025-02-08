@@ -1,0 +1,5 @@
+Test Case ID,Description,Steps,Expected Result,Actual Result,Status,Remarks
+SC001,API Key Exposure,Check browser console for exposed API keys,No keys should be visible,Keys are not exposed,Passed,Security validated
+SC002,HTTPS Security Check,Verify if the website is loaded over HTTPS,Site should use HTTPS,Site is using HTTPS,Passed,Secure communication validated
+SC003,SQL Injection Protection,Test login & input fields with SQL injection attack,System should prevent SQL injection,SQL injection attempt blocked,Passed,No security vulnerabilities found
+SC004,Authentication Validation,Try accessing protected pages without login,User should be redirected to login,Unauthorized access restricted,Passed,Authentication is working correctly
